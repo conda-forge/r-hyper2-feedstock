@@ -33,20 +33,22 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-emc
     - r-rcpp >=1.0_7
+    - r-alabama
+    - r-calibrator
     - r-cubature
-    - r-disordr >=0.0_8
+    - r-disordr >=0.0_9
     - r-magrittr
     - r-mathjaxr
     - r-partitions
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-emc
     - r-rcpp >=1.0_7
+    - r-alabama
+    - r-calibrator
     - r-cubature
-    - r-disordr >=0.0_8
+    - r-disordr >=0.0_9
     - r-magrittr
     - r-mathjaxr
     - r-partitions
