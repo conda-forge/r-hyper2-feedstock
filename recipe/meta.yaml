@@ -1,4 +1,4 @@
-{% set version = '2.0-1' %}
+{% set version = "2.0-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hyper2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hyper2/hyper2_{{ version }}.tar.gz
-  sha256: 9083416891785ef9f947a93f56c863a30008552a5a7ffa4496ca2f6d88627577
+  sha256: 608b27416c6b3cc0e267b646242e4dd588677c0564225e3e9dcf1b57e72a4a08
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -33,20 +33,22 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-emc
     - r-rcpp >=1.0_7
+    - r-alabama
+    - r-calibrator
     - r-cubature
-    - r-disordr >=0.0_8
+    - r-disordr >=0.0_9
     - r-magrittr
     - r-mathjaxr
     - r-partitions
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-emc
     - r-rcpp >=1.0_7
+    - r-alabama
+    - r-calibrator
     - r-cubature
-    - r-disordr >=0.0_8
+    - r-disordr >=0.0_9
     - r-magrittr
     - r-mathjaxr
     - r-partitions
@@ -59,8 +61,7 @@ test:
 about:
   home: https://github.com/RobinHankin/hyper2
   license: GPL-2.0-or-later
-  summary: A suite of routines for the hyperdirichlet distribution; supersedes the 'hyperdirichlet'
-    package.
+  summary: A suite of routines for the hyperdirichlet distribution; supersedes the 'hyperdirichlet' package.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
