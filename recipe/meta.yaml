@@ -1,4 +1,4 @@
-{% set version = "2.0-3" %}
+{% set version = "3.0-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hyper2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hyper2/hyper2_{{ version }}.tar.gz
-  sha256: 608b27416c6b3cc0e267b646242e4dd588677c0564225e3e9dcf1b57e72a4a08
+  sha256: ae0e8f077b338e330eae8be09b135c9cf067e6ddaab46cc338c72518fb2ed826
 
 build:
   merge_build_host: true  # [win]
