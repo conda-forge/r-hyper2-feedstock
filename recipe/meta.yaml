@@ -49,7 +49,6 @@ requirements:
     - r-partitions
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=1.0_7
     - r-rdpack
     - r-alabama
