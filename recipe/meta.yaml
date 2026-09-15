@@ -1,15 +1,15 @@
-{% set version = "3.2" %}
+{% set version = "3.2-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-hyper2
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/hyper2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hyper2/hyper2_{{ version }}.tar.gz
-  sha256: c4f5905fd3892a5479e443b2a4883d3166320e9cd3cbebe2c177ebbb34b757db
+  sha256: 9c84a34e8e6893419858b8b05c8d03886522debcfbe1d92089bc78223bb46602
 
 build:
   number: 0
@@ -42,6 +42,7 @@ requirements:
     - r-rdpack
     - r-alabama
     - r-calibrator
+    - r-crayon
     - r-cubature
     - r-disordr >=0.0_9
     - r-frab
@@ -53,6 +54,7 @@ requirements:
     - r-rdpack
     - r-alabama
     - r-calibrator
+    - r-crayon
     - r-cubature
     - r-disordr >=0.0_9
     - r-frab
