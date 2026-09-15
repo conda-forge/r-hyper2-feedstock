@@ -42,6 +42,7 @@ requirements:
     - r-rdpack
     - r-alabama
     - r-calibrator
+    - r-crayon
     - r-cubature
     - r-disordr >=0.0_9
     - r-frab
@@ -53,6 +54,7 @@ requirements:
     - r-rdpack
     - r-alabama
     - r-calibrator
+    - r-crayon
     - r-cubature
     - r-disordr >=0.0_9
     - r-frab
